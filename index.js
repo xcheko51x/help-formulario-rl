@@ -6,18 +6,25 @@ let objAlumnado = {
     curso: '',
     edad: ''
 }
+
 // agregar o actualizar la info
 let editando = false;
 
+let max = 0;
+
 let formulario = document.querySelector('#formulario');
+
 let nombreInput = document.querySelector('#nombre');
 let cursoInput = document.querySelector('#curso');
 let edadInput = document.querySelector('#edad');
+
 let btnAgregar = document.querySelector('#btnAgregar');
 let estadistica = document.querySelector('#estadistica')
 
+let divEstadistica = document.querySelector('.div-estadistica');
+
 formulario.addEventListener('submit', validarFormulario);
-estadistica.addEventListener('submit', mostrarEstadistica)
+estadistica.addEventListener('submit', mostrarEstadistica);
 
 function validarFormulario(event) {
     event.preventDefault();
@@ -26,6 +33,7 @@ function validarFormulario(event) {
         alert('Por favor, rellena todos los campos');
         return;
     }
+
     if (editando) {
         editarAlumnado();
         editando = false;
@@ -111,7 +119,7 @@ function mostrarAlumnado() {
     const tBody = document.createElement('tbody')
 
     listaAlumnado.forEach(alumnado => {
-        let { id, nombre, curso, edad } = alumnado;
+        let { id, nombre, curso, edad } = alumnado
 
         let trBody = document.createElement('tr'); 
 
@@ -157,14 +165,13 @@ function mostrarAlumnado() {
         tBody.appendChild(trBody)
     })
 
-    tabla.appendChild(tBody)
     tabla.appendChild(tHead)
+    tabla.appendChild(tBody)
     
     divAlumnado.appendChild(tabla);
 }
 
 function cargarAlumnado(alumnado) {
-
     let { id, nombre, curso, edad } = alumnado;
 
     nombreInput.value = nombre;
@@ -178,7 +185,6 @@ function cargarAlumnado(alumnado) {
     formulario.querySelector('button[type="submit"]').classList.add('btn-primary');
 
     editando = true;
-
 }
 
 
@@ -195,7 +201,6 @@ function editarAlumnado() {
             alumnado.curso = objAlumnado.curso;
             alumnado.edad = objAlumnado.edad;
         }
-
     });
 
     limpiarHTML();
@@ -231,5 +236,17 @@ function mostrarEstadistica(event) {
         return
     }
 
+    maxEdad();
 
+    divEstadistica.innerHTML = `
+    <p> La edad máxima es de: ${max}</p>
+    `
+}
+
+function maxEdad() {
+    listaAlumnado.forEach(alumno => {
+        if (max < alumno.edad) {
+            max = alumno.edad
+        }
+    })
 }
