@@ -1,0 +1,152 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: Questrial;
+    src: url('./Questrial-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    /* padding: 1rem; */
+    /* background-color: #FEF2F2; */
+}
+
+header,
+main,
+aside,
+footer {
+
+    border: solid .125rem;
+}
+
+.page {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 2fr 6fr 1fr;
+    /* gap: 1rem; */
+
+}
+
+
+
+header {
+    grid-column: 1 / 4;
+    /* padding-left: 20%; */
+    /* background-color: lightseagreen; */
+    font-family: Questrial;
+}
+
+
+/* .imagen {
+    display: flex;
+    justify-content: center;
+} */
+
+
+main {
+    /* background-color: lightblue; */
+    font-family: Questrial;
+}
+
+.div-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    justify-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    grid-gap: 1.25rem;
+    gap: 1.25rem;
+    padding-bottom: 2%;
+    border-width: 4px;
+    border-style: outset;
+    border-color: #97D5EC;
+    border-radius: 1.375rem;
+    font-family: Questrial;
+    
+}
+
+aside {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    
+ }
+
+.div-estadistica{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    border: solid black;
+    
+} 
+
+.div-alumnado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    border: solid black;
+}
+
+
+
+footer {
+    grid-column: 1 / 4;
+    background-color: lightcoral;
+    font-family: Questrial;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    flex-direction: row;
+ }
+
+hr{
+    width: 100%;
+    height: .0625rem;
+}
+
+.btn-editar {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+
+ }
+
+.btn-editar a{
+    color: white;
+    text-decoration: none;
+    background-color: green;
+} 
+
+.btn-eliminar {
+    color: white;
+    text-decoration: none;
+    background-color: red;
+ }
+.btn-eliminar  a{
+        color: white;
+        text-decoration: none;
+        background-color: red;
+} 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <container class="page">
+        <header>
+
+            <div class="imagen">
+                <!-- <img src="./camaleon.JPG" alt="camaleon" width="170rem" height="100rem"> -->
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-green navbar ">
+
+                <a class="navbar-brand" href="#">CEIP Camaleón</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-item nav-link disabled" href="#">Inicio</a>
+                        <a class="nav-item nav-link disabled" href="#">Sobre el centro</a>
+                        <a class="nav-item nav-link disabled" href="#">Secretaria</a>
+                        <a class="nav-item nav-link disabled" href="#">Organización</a>
+                        <a class="nav-item nav-link disabled" href="#">AMPA</a>
+                        <a class="nav-item nav-link active" href="#">Encuesta Participa </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="div-formulario">
+                <h4>Formulario</h4>
+                <form action="#" id="formulario">
+                    <div class="form-row">
+                        <div class="form-group row-md-4">
+                            <label for="inputNombre4">
+                                <h5>Nombre</h5>
+                            </label>
+                            <input type="text" class="form-control" id="nombre" placeholder="nombre">
+                            <label for="inputCurso">
+                                <h5>Curso</h5>
+                            </label>
+                            <input type="number" min="1" max="6" class="form-control" id="curso" placeholder="curso">
+                            <label for="inputEdad">
+                                <h5>Edad</h5>
+                            </label>
+                            <input type="number" min="5" max="14" class="form-control" id="edad" placeholder="edad">
+
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="botones">
+                        <button type="submit" id="btnAgregar" class="btn btn-success">Cargar Lista</button>
+
+                        <button type="submit" id="guardar" class="btn btn-success">Guardar Lista</button>
+                    </div>
+                </form>
+        </main>
+        <aside>
+            <div class="div-listado">
+                <h4>Tabla Alumnado</h4>
+                <div class="div-alumnado">
+                    <table class="table table-striped" id="lista">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOMBRE</th>
+                                <th>CURSO</th>
+                                <th>EDAD</th>
+                                <th>EDITAR</th>
+                                <th>BORRAR</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h4>Estadística</h4>
+                <form action="#" id="estadistica">
+                    <div class="boton">
+                        <button type="submit" id="btnEstadistica" class="btn btn-info">Resultados</button>
+                    </div>
+                </form>
+                
+                <div class="div-estadistica">
+                    <table class="table table-striped" id="tabla-estadistica">
+                        <thead>
+                            <tr>
+                                <th>MEDIA EDAD</th>
+                                <th>MEDIA CURSO</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </aside>
+
+        <footer>
+            <br>
+            <ul>
+                <li> Aviso legal</li>
+                <li> Cookies</li>
+                <li>Politica de privacidad</li>
+                <li>Contacta</li>
+                <li> © 2023 CEIP Camaleón</li>
+            </ul>
+        </footer>
+
+    </container>
+
+    <script type="module" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
